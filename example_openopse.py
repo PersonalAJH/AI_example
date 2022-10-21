@@ -132,13 +132,24 @@ weightFile = path + "/" + "pose_iteR_102000.caffemodel"
 net = cv2.dnn.readNetFromCaffe(protoFile, weightsFile)
 net = cv2.dnn.readNet(protoFile, weightsFile)
 
-
-
-
 cap = cv2.VideoCapture(0)
 inputHeight = 368
 inputWidth  = 368
 inputScale  = 1.0/255
+
+
+
+"""
+    # youtube 에서 데이터 영상 가져오기
+    
+    import pafy
+    import cv2
+    url = "https://www.youtube.com/watch?v=v7bnOxV4jAc"
+    video = pafy.new(url)
+    preftype = video.getbest(preftype="mp4")
+    cap = cv2.VideoCapture(preftype.url) 
+
+"""
 
 
 

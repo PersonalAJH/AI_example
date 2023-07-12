@@ -6,3 +6,6 @@ RL 계획
 1. 자동차 경로 계획
 2. 로봇 시뮬레이션
 3. 보행 로봇 시뮬레이션
+
+example
+https://neptune.ai/blog/reinforcement-learning-applications

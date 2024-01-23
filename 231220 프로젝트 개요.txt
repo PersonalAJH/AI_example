@@ -26,6 +26,17 @@ Ctrl + Enter (현재 셀만 실행)
 Alt + Enter (현재 셀 실행 후 새 셀 추가)
 
 
+1.15 기록
+1. 모델선택 
+    - Openpose 많은 기능들과 정밀한 skeleton data 를 보여주지만 일반적으로 높은 처리 능력을 요구하기 떄문에 내가 하는 Som board 나 라즈베리 파이에서는 적합하지 않을 수 있다.
+    - MediaPipe (Google): MediaPipe는 경량화되어 있고 효율적인 처리가 가능한 프레임워크로, 라즈베리파이와 같은 임베디드 시스템에서도 잘 작동한다. MediaPipe Pose는 실시간으로 포즈 추정을 수행할 수 있으며, 상대적으로 낮은 컴퓨팅 파워를 요구합니다.
+    - OpenCV의 경량 모델: OpenCV 라이브러리는 몇몇 경량화된 딥 러닝 모델을 제공합니다. 이들은 라즈베리파이와 같은 장치에서도 실행될 수 있도록 최적화되어 있습니다. 예를 들어, OpenCV의 dnn 모듈을 사용하여 PoseNet이나 MobileNet과 같은 경량 모델을 실행할 수 있습니다.
+
+우선 쉽게 할 수 있는 openCV 의 경량화 모델을 사용할 예정이고 MediaPipe 도 사용해 볼수있으면 사용할 예정
+
+OpenCv 의 이미지 모델을 사용했는데 이게.. 상체만 있는걸 찾던가 해야함 아니면 정확도가 매우 떨어짐
+
+
 
 0123 기록
 pip install mediapipe opencv-python

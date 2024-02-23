@@ -55,9 +55,9 @@ void detectArucoAndEstimatePose(cv::VideoCapture& cap, const cv::Ptr<cv::aruco::
             for (int i = 0; i < markerIds.size(); i++) {
                 cv::aruco::drawAxis(imageCopy, cameraMatrix, distCoeffs, rvecs[i], tvecs[i], 0.03);
 
-                // Orientation 벡터 계산 (0,0,1 벡터 변환)
+                // Orientation 벡터 계산 (0,0,1 벡터 변환) -> 마커가 튀어나오는 쪽에 대한 게산식 
                 cv::Mat rotationMatrix;
-                cv::Rodrigues(rvecs[i], rotationMatrix);
+                cv::Rodrigues(rvecs[i], rotationMatrix);        // 로드리게스라고 3개의 아웃풋으로 하나의 축과 회전각을 나타내는 변수임
                 cv::Mat forwardVector = (cv::Mat_<double>(3,1) << 0, 0, 1); // Z축 방향
                 cv::Mat transformedVector = rotationMatrix * forwardVector; // 변환된 방향 벡터
 
